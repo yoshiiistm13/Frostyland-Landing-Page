@@ -18,96 +18,97 @@
         </header>
 
         <section class="hero">
-    <div class="hero__container">
-        <img src="assets/images/Logo.svg" alt="Frostyland Logo">
-        <a class="hero__badge" href="">Quiero mi franquicia Frostyland</a>
-   
-        <div class="hero__content">
-            <h2 class="title-section">🍧 La nueva <span class="texto-destacado"><i>Heladería</i></span> próxima en tu ciudad 🍧</h2>
-            <p class="hero__subtitle">Una marca con innovación y concepto diferenciado en helados con ingredientes 100% frescos, opciones saludables y la mejor experiencia.</p>
-        </div>
+            <div class="hero__container">
+                <img src="assets/images/Logo.svg" alt="Frostyland Logo">
 
-        <button class="hero__video-btn">
-            <img class="hero__video-content" src="assets/icons/Icon video.svg" alt="Video Icon">
-            <span class="hero__video-title">Ver Video Tour</span>
-        </button>
+                <!-- ÚNICO BOTÓN PRINCIPAL PARA ABRIR EL MODAL -->
+                <button class="hero__video-btn" type="button" onclick="document.getElementById('videoModal').showModal()">
+                    <img class="hero__video-content" src="assets/icons/Icon video.svg" alt="Video Icon">
+                    <span class="hero__video-title">Ver Video Tour</span>
+                </button>
 
-        <!-- Contenedor del Formulario -->
-        <div class="form-container">
-            <form class="form-lead__form" action="">
-                <p class="texto-destacado form-title"><b>Te interesa formar parte de la familia Frostyland</b></p>
+                <!-- VENTANA MODAL (DIALOG) -->
+                <dialog id="videoModal" class="video-modal">
+                    <div class="modal-content">
+                        <!-- Botón para cerrar la ventana -->
+                        <button class="modal-close" type="button" onclick="document.getElementById('videoModal').close()">✕</button>
+                        
+                        <!-- Contenedor del Video -->
+                        <div class="video-wrapper">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/hZXv3lLxgz0" title="Video Tour Frostyland" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </dialog>
                 
-                <label class="form-lead__label" for="input-name">Nombre</label>
-                <input class="form-lead__input" id="input-name" type="text" placeholder="Tu nombre" required>
-                
-                <label class="form-lead__label" for="input-mail">Email</label>
-                <input class="form-lead__input" id="input-mail" type="email" placeholder="Tu correo electrónico" required>
-                
-                <label class="form-lead__label" for="input-tel">Teléfono</label>
-                <input class="form-lead__input" id="input-tel" type="tel" placeholder="Tu número de teléfono" required>
-                
-                <label class="form-lead__label" for="input-city">Ciudad</label>
-                <input class="form-lead__input" id="input-city" type="text" placeholder="Tu Ciudad" required>
-                
-                <label class="form-lead__label" for="input-monto">Capital</label>
-                <input class="form-lead__input" id="input-monto" type="number" placeholder="Tu monto de inversión" required>
-                
-                <label class="form-lead__label" for="text-comments">Comentarios</label>
-                <textarea class="form-lead__input form-lead__textarea" id="text-comments" placeholder="¿En qué podemos ayudarte?"></textarea>
-                
-                <button class="form-lead__submit" type="submit">Enviar Solicitud</button>
-            </form>
-        </div>
+                <div class="hero__content">
+                    <h2 class="title-section">La nueva <span class="texto-destacado"><i>Heladería</i></span> próxima en tu ciudad 🍧</h2>
+                    <p class="hero__subtitle">Una marca con innovación y concepto diferenciado en helados con ingredientes 100% frescos, opciones saludables y la mejor experiencia.</p>
+                </div>
 
-        <!-- 🍨 LA IMAGEN AQUÍ ADENTRO DEL HERO CONTAINER -->
-        <div class="features__image-container hero__image-lateral">
-            <img class="features__main-img" src="assets/images/franchise frostyland img.webp" alt="Helado Frostyland">
-        </div>
+                <!-- Contenedor del Formulario -->
+                <div class="form-container">
+                    <form class="form-lead__form" action="">
+                        <p class="texto-destacado form-title"><b>Te interesa formar parte de la familia Frostyland</b></p>
+                        
+                        <label class="form-lead__label" for="input-name">Nombre</label>
+                        <input class="form-lead__input" id="input-name" type="text" placeholder="Tu nombre" required>
+                        
+                        <label class="form-lead__label" for="input-mail">Email</label>
+                        <input class="form-lead__input" id="input-mail" type="email" placeholder="Tu correo electrónico" required>
+                        
+                        <label class="form-lead__label" for="input-tel">Teléfono</label>
+                        <input class="form-lead__input" id="input-tel" type="tel" placeholder="Tu número de teléfono" required>
+                        
+                        <label class="form-lead__label" for="input-city">Ciudad</label>
+                        <input class="form-lead__input" id="input-city" type="text" placeholder="Tu Ciudad" required>
+                        
+                        <label class="form-lead__label" for="input-monto">Capital</label>
+                        <input class="form-lead__input" id="input-monto" type="number" placeholder="Tu monto de inversión" required>
+                        
+                        <label class="form-lead__label" for="text-comments">Comentarios</label>
+                        <textarea class="form-lead__input form-lead__textarea" id="text-comments" placeholder="¿En qué podemos ayudarte?"></textarea>
+                        
+                        <button class="form-lead__submit" type="submit">Enviar Solicitud</button>
+                    </form>
+                </div>
 
-    </div>
-</section>
+                <!-- IMAGEN LATERAL -->
+                <div class="features__image-container hero__image-lateral">
+                    <img class="features__main-img" src="assets/images/franchise frostyland img.webp" alt="Helado Frostyland">
+                </div>
 
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE CARACTERÍSTICAS -->
         <section class="features">
-
             <h2 class="hero__title">Resultados que inspiran confianza 🍨</h2>
             <div class="features__grid">
-                
-                <!-- Tarjeta 1 -->
                 <article class="feature-card">
                     <img class="feature-card__icon" src="assets/icons/Icon Cubiertos.svg" alt="Ícono de cubiertos">
                     <h3 class="feature-card__title">Tú eliges</h3>
                     <p class="feature-card__description">En Frostyland, cada cliente crea su helado a su manera. Un modelo rápido, divertido y altamente rentable que atrae y fideliza constantemente a más consumidores.</p>
                 </article>
-
-                <!-- Tarjeta 2 -->
                 <article class="feature-card">
                     <img class="feature-card__icon" src="assets/icons/Icon Hoja.svg" alt="Ícono de hoja">
                     <h3 class="feature-card__title">Modelo de negocio rentable y probado</h3>
                     <p class="feature-card__description">Combinamos el autoservicio, alta demanda y bajos costos operativos, garantizando atractivos márgenes de ganancia para tu inversión.</p>
                 </article>
-
-                <!-- Tarjeta 3 -->
                 <article class="feature-card">
                     <img class="feature-card__icon" src="assets/icons/Icon Corazon.svg" alt="Ícono de corazón">
                     <h3 class="feature-card__title">Toppings 100% Frescos y disfruta saludable</h3>
                     <p class="feature-card__description">Seleccionamos las mejores fresas y frutas de temporada para asegurar la frescura en cada bocado. Opciones ligeras y deliciosas pensadas para consentirte sin remordimientos.</p>
                 </article>
-
-                <!-- Tarjeta 4 -->
                 <article class="feature-card">
                     <img class="feature-card__icon" src="assets/icons/Icon Cubiertos.svg" alt="Ícono de cubiertos">
                     <h3 class="feature-card__title">Desarrollo del “know-how” específico</h3>
                     <p class="feature-card__description">Te brindamos procesos optimizados, entrenamiento completo para tu apertura y soporte continuo para garantizar el éxito de tu franquicia.</p>
                 </article>
-
-                <!-- Tarjeta 5 -->
                 <article class="feature-card">
                     <img class="feature-card__icon" src="assets/icons/Icon Hoja.svg" alt="Ícono de hoja">
                     <h3 class="feature-card__title">Inversión accesible y rápido retorno</h3>
                     <p class="feature-card__description">Una oportunidad con inversión accesible y un esquema diseñado para lograr una rápida recuperación de capital en una marca en constante crecimiento.</p>
                 </article>
-
-                <!-- Tarjeta 6 -->
                 <article class="feature-card">
                     <img class="feature-card__icon" src="assets/icons/Icon Corazon.svg" alt="Ícono de corazón">
                     <h3 class="feature-card__title">Mínimos requerimientos de personal</h3>
@@ -116,6 +117,7 @@
             </div>
         </section>
 
+        <!-- SECCIÓN DE RESEÑAS -->
         <section class="review">
             <div class="review-section">
                 <img class="icon-stars" src="assets/icons/Icon Stars.svg" alt="Estrellas de calificación">
@@ -146,6 +148,7 @@
             </div>
         </section>
 
+        <!-- MODELOS DE NEGOCIO -->
         <section class="data-franchise-purple">
             <div class="data-franchise-title">
                 <h2 class="title-section title-section__purple">Modelos de negocio</h2>
@@ -153,14 +156,14 @@
             
             <div class="data-months">
                 <div class="months-title"><h2>Modelo Isla 9m2</h2></div>
-                <div class="months-subtitle"><p>Cuota Inicial de Franquicia $200,000.00</p></div>
+                <div class="months-subtitle"><p>Cuota Inicial de Franquicia $800,000</p></div>
                 <div class="months-parraf"><p>Meses para retorno de inversión | 10 meses</p></div>
                 <div class="img-local"><img src="assets/images/Isla 2.png" alt="Isla Frostyland"></div>
             </div>
 
             <div class="data-months">
                 <div class="months-title"><h2>Modelo Local 20m2</h2></div>
-                <div class="months-subtitle"><p>Cuota Inicial de Franquicia $200,000.00</p></div>
+                <div class="months-subtitle"><p>Cuota Inicial de Franquicia $800,000</p></div>
                 <div class="months-parraf"><p>Meses para retorno de inversión | 25 meses</p></div>
                 <div class="img-local"><img src="assets/images/Local 2.png" alt="Local Frostyland"></div>
             </div>
@@ -186,22 +189,40 @@
             </div>
         </section>
 
-        <section class="products">
-            <div class="product-card">
-                <h2 class="title-section">Nuestro Helado</h2>
-                <div class="product-card__icecream">
-                    <img class="product-card__image" src="assets/images/94DFE82F-189E-4198-BD4F-0825771D1417.png" alt="Helado Frostyland">
-                </div>
-                <h3 class="product-card__title">Helado Yogurt Griego 100% Natural</h3>
-                <p class="product-card__description">Descubre el equilibrio perfecto entre la cremosidad de nuestra receta artesanal. Una experiencia sensorial que redefine el postre clásico.</p>
-                <ul class="product-card__benefits">
-                    <li class="product-card__benefit-item"><img src="assets/icons/Icon Check.svg" alt="Check"><span>Yogurt bajo en grasa y alto en probióticos</span></li>
-                    <li class="product-card__benefit-item"><img src="assets/icons/Icon Check.svg" alt="Check"><span>Fruta de origen local garantizada</span></li>
-                    <li class="product-card__benefit-item"><img src="assets/icons/Icon Check.svg" alt="Check"><span>Sin conservadores ni colorantes artificiales</span></li>
-                </ul>
-            </div>
-        </section>
+        <!-- PRODUCTOS -->
+<section class="products">
+    <div class="products__container">
+        <!-- Columna Izquierda: Información (Título, descripción y beneficios) -->
+        <div class="product-info">
+            <h2 class="title-section">Nuestro Helado</h2>
+            <h3 class="product-card__title">Helado Yogurt Griego 100% Natural</h3>
+            <p class="product-card__description">
+                Descubre el equilibrio perfecto entre la cremosidad de nuestra receta artesanal. Una experiencia sensorial que redefine el postre clásico de Frostyland.
+            </p>
+            <ul class="product-card__benefits">
+                <li class="product-card__benefit-item">
+                    <img src="assets/icons/Icon Check.svg" alt="Check">
+                    <span>Yogurt bajo en grasa y alto en probióticos</span>
+                </li>
+                <li class="product-card__benefit-item">
+                    <img src="assets/icons/Icon Check.svg" alt="Check">
+                    <span>Fruta de origen local garantizada</span>
+                </li>
+                <li class="product-card__benefit-item">
+                    <img src="assets/icons/Icon Check.svg" alt="Check">
+                    <span>Sin conservadores ni colorantes artificiales</span>
+                </li>
+            </ul>
+        </div>
 
+        <!-- Columna Derecha: Imagen -->
+        <div class="product-card__icecream">
+            <img class="product-card__image" src="assets/images/94DFE82F-189E-4198-BD4F-0825771D1417.png" alt="Helado Frostyland">
+        </div>
+    </div>
+</section>
+
+        <!-- APERTURAS -->
         <section class="info">
             <h2 class="title-section">Aperturas</h2>
 
@@ -238,6 +259,15 @@
             </div>
         </section>
 
+        <section class="map-section">
+    <h2 class="title-section">Encuéntranos</h2>
+    <!-- Contenedor donde se inyectará el mapa mediante JS -->
+    <div id="google-map" style="width: 100%; height: 400px; background-color: #eee;">
+        <p style="text-align: center; padding-top: 150px;">Cargando mapa interactivo...</p>
+    </div>
+</section>
+
+        <!-- FOOTER -->
         <footer class="footer">
             <div class="footer-info">
                 <h3 class="footer-title">FROSTYLAND</h3>
@@ -250,7 +280,7 @@
                 </div>
                 <hr>
                 <a href="">AVISO DE PRIVACIDAD</a>
-                <p class="privacidad">@Alcázar & Compañía | © 2025 FROSTYLAND Patio Toluca. All rights reserved.</p>
+                <p class="privacidad">@Alcázar & Compañía | © 2026 FROSTYLAND. All rights reserved.</p>
             </div>
         </footer>
     </div>
