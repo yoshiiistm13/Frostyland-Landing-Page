@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </head>
 <body>
     <div class="general-container">
@@ -190,34 +191,26 @@
         </section>
 
         <!-- PRODUCTOS -->
-<section class="products">
+        <section class="products">
     <div class="products__container">
-        <!-- Columna Izquierda: Información (Título, descripción y beneficios) -->
-        <div class="product-info">
-            <h2 class="title-section">Nuestro Helado</h2>
-            <h3 class="product-card__title">Helado Yogurt Griego 100% Natural</h3>
-            <p class="product-card__description">
-                Descubre el equilibrio perfecto entre la cremosidad de nuestra receta artesanal. Una experiencia sensorial que redefine el postre clásico de Frostyland.
-            </p>
-            <ul class="product-card__benefits">
-                <li class="product-card__benefit-item">
-                    <img src="assets/icons/Icon Check.svg" alt="Check">
-                    <span>Yogurt bajo en grasa y alto en probióticos</span>
-                </li>
-                <li class="product-card__benefit-item">
-                    <img src="assets/icons/Icon Check.svg" alt="Check">
-                    <span>Fruta de origen local garantizada</span>
-                </li>
-                <li class="product-card__benefit-item">
-                    <img src="assets/icons/Icon Check.svg" alt="Check">
-                    <span>Sin conservadores ni colorantes artificiales</span>
-                </li>
-            </ul>
-        </div>
+        <div class="product-card">
+            
+            <!-- Bloque de información (Texto y beneficios) -->
+            <div class="product-info">
+                <h2 class="product-card__title">Helado Yogurt Griego 100% Natural</h2>
+                <p class="product-card__description">Descubre el equilibrio perfecto entre la cremosidad de nuestra receta artesanal...</p>
+                <ul class="product-card__benefits">
+                    <li class="product-card__benefit-item"><img src="assets/icons/Icon Check.svg" alt=""> Yogurt bajo en grasa...</li>
+                    <li class="product-card__benefit-item"><img src="assets/icons/Icon Check.svg" alt=""> Fruta de origen local...</li>
+                    <li class="product-card__benefit-item"><img src="assets/icons/Icon Check.svg" alt=""> Sin conservadores...</li>
+                </ul>
+            </div>
 
-        <!-- Columna Derecha: Imagen -->
-        <div class="product-card__icecream">
-            <img class="product-card__image" src="assets/images/94DFE82F-189E-4198-BD4F-0825771D1417.png" alt="Helado Frostyland">
+            <!-- Contenedor de la imagen (Debe estar al mismo nivel que .product-info) -->
+            <div class="product-card__icecream">
+                <img src="assets/images/1C2031BD-F629-4C7E-B389-BBB60AD1C6E0.png" alt="Helado Frostyland">
+            </div>
+
         </div>
     </div>
 </section>

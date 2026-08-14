@@ -83,3 +83,48 @@ document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver(animateProgressBars, observerOptions);
     observer.observe(barsSection);
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const productCards = document.querySelectorAll(".product-card");
+
+    if (productCards.length === 0) return;
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            // Se activará solo cuando el 50% de la sección esté a la vista del usuario
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5 // Sube este número (ej. 0.4 o 0.5) para exigir que baje más en la página
+    });
+
+    productCards.forEach(card => observer.observe(card));
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let hasScrolled = false;
+
+    function triggerConfettiOnFirstScroll() {
+        if (!hasScrolled) {
+            hasScrolled = true;
+
+            // Lanzamiento de confeti con los colores de tu logotipo
+            confetti({
+                particleCount: 120,
+                spread: 100,
+                origin: { y: 0.4 }, // Ajusta la altura de la explosión en pantalla
+                colors: ['#38bdf8', '#ec4899', '#facc15'] // Azul claro, rosa y amarillo
+            });
+
+            // Se ejecuta solo una vez en el primer scroll
+            window.removeEventListener("scroll", triggerConfettiOnFirstScroll);
+        }
+    }
+
+    window.addEventListener("scroll", triggerConfettiOnFirstScroll);
+});
