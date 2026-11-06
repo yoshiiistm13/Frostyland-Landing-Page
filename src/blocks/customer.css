@@ -1,0 +1,138 @@
+.customer{
+    padding: 40px 16px;
+    background-color: #F9F1FF;
+    width: 100%;
+}
+
+.customer__container{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.customer__small{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.customer__display{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.customer__calification{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.customer__google{
+    font-weight: 600;
+    font-size: 10px;
+    color: #64748B;
+}
+
+.customer__cards{
+    margin-top: 16px;
+    padding-top: 16px;
+    border: 1px solid #F3E8FF;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+.customer__card{
+    
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 8PX;
+}
+
+.customer__user{
+    display: flex;
+    gap: 10px;
+    padding: 4px 0;
+}
+
+.customer__comment{
+    color: #475569;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.user h5{
+    color: #0F172A;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.user p{
+    color: #94A3B8;
+    font-weight: 400;
+    font-size: 10px;
+}
+
+.customer .section__title{
+    font-size: 24px;
+}
+
+@media (min-width:1024px) {
+    .customer{
+        padding: 3rem 5rem;
+    }
+
+    .customer__container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .customer__calification{
+        font-size: 1rem;
+    }
+
+    .customer__google{
+        font-size: 0.875rem;
+    }
+
+    .customer .section__text{
+        font-size: 1rem;
+    }
+
+    .customer__cards-container {
+        align-items: stretch;
+        gap: 1.25rem;
+    }
+
+    .customer__cards{
+        flex: 1;
+        min-width: 0;
+        max-width: none;
+        margin-top: 1.5rem;
+    }
+
+    .customer__comment {
+        font-size: 0.875rem;
+    }
+
+    .user h5 {
+        font-size: 0.875rem;
+    }
+
+    .user p {
+        font-size: 0.75rem;
+    }
+
+    .customer__cards-container{
+        display: flex;
+        flex-direction: row;
+        gap: 1.25rem;
+    }
+
+    .customer .section__title{
+        font-size: 2rem;
+    }
+}

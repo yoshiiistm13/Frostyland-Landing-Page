@@ -7,273 +7,544 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <div class="general-container">
-        <header class="header">
-            <div class="header__title">
-                <h1 class="title">Forma parte de la familia Frostyland</h1>
+        <header class="header" id="inicio">
+            <div class="header__container">
+                
+
+                <div class="header__logo">
+                    <a class="header__logo-text" href="https://frostyland.com.mx/">
+                    <p>Frostyland</p>
+                    </a>
+                </div>
+
+                <nav class="header__nav">   
+                    <a href="#benefits">Beneficios</a>
+                    <a href="#finance">Metricas</a>
+                    <a href="#testimonials">Testimonios</a>
+                    <a href="#contact">Contacto</a>
+                </nav>
+
+                <div class="header__buttons">
+
+                <div class="header__btn-wa">
+                    <a class="header__btn-wa" href="https://wa.me/5215552640888" target="_blank" >WhatsApp</a>
+                </div>
+
+                <div class="header__btn">
+                    <a class="header__btn" href="#form">Franquicia</a>
+                </div>
+                
+                </div>
+                
+
             </div>
         </header>
 
-        <section class="hero">
-            <div class="hero__container">
-                <img class="hero__header-logo" src="assets/images/Logo.svg" alt="Frostyland Logo">
+        <main class="main">
+            <section class="hero">
 
-                <!-- ÚNICO BOTÓN PRINCIPAL PARA ABRIR EL MODAL -->
-                <button class="hero__video-btn" type="button" onclick="document.getElementById('videoModal').showModal()">
-                    <img class="hero__video-content" src="assets/icons/Icon video.svg" alt="Video Icon">
-                    <span class="hero__video-title">Ver Video Tour</span>
-                </button>
+                <div class="hero__desktop">
 
-                <!-- VENTANA MODAL (DIALOG) -->
-                <dialog id="videoModal" class="video-modal">
-                    <div class="modal-content">
-                        <!-- Botón para cerrar la ventana -->
-                        <button class="modal-close" type="button" onclick="document.getElementById('videoModal').close()">✕</button>
+                <div class="hero__container">
+                    <div class="small__container">
+                        <small class="small__title"> 
+                            <span class="dot"></span> 
+                            <span>LÍDERES EN HELADO DE YOGURT GRIEGO</span>
+                        </small>
+                    </div>
+                    <h1 class="hero__title">Únete al Éxito de Frostyland: <span class="purple-text"> Emprende con Seguridad</span></h1>
+                    <p class="hero__text">Descubre el modelo de negocio más rentable en el sector de postres helados. Un concepto innovador
+                    que combina frescura, diseño y rentabilidad comprobada.</p>
+
+                    <div class="hero__buttons">
                         
-                        <!-- Contenedor del Video -->
-                        <div class="video-wrapper">
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/hZXv3lLxgz0" title="Video Tour Frostyland" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <a class="hero__btn-cta" href="#contact">Solicitar Información</a>
+
+                        <a class="hero__btn-video" href="#videoModal" id="openVideoModal">
+                            <span><img src="./assets/icons/Icon video.svg" alt=""></span>
+                            <span>Ver Video Tour</span>
+                        </a>
+
+                    </div>
+                    <div class="hero__grid">
+                        <div class="hero__roi"><h4>ROI 18 - 24 MESES</h4></div>
+                        <div class="hero__roi"><h4>SOPORTE Y MANUALES</h4></div>
+                        <div class="hero__roi"><h4>KNOW HOW INCLUIDO</h4></div>
+                    </div>
+                </div>
+
+                <section id="form" class="form">
+                        <div class="form__container">
+                            <div class="purple-bar"></div>
+                            <div class="form__text">
+                                <div class="form__text-small">
+                                    <small class="small__text-purple">PASO 1 DE 2: PERFIL INICIAL</small>
+                                    <small class="small__text-green">Franquicias 2027</small>
+                                </div>
+        
+                                <h2 class="section__title">Forma parte de nuestra familia</h2>
+                                <p class="section__text">Completa el formulario y un asesor senior te compartirá el Dossier Financiero en menos de 24 horas.<p>
+                                    <form action="" id="form">
+                                    <div class="input__container">
+                                        <label for="name">Nombre y Apellidos</label>
+                                        <input type="text" id="name" class="input" placeholder="Ej. Ana Sofía Morales" required minlength="3" >
+                                    </div>
+        
+                                    
+                                    <div class="input__container">
+                                        <label for="mail">Correo Electrónico</label>
+                                        <input type="email" id="mail" class="input" placeholder="correo@ejemplo.com" required>
+                                    </div>
+                                    <div class="input__container">
+                                        <label for="phone">Teléfono / WhatsApp</label>
+                                        <input type="tel" id="phone" class="input" placeholder="55 0000 0000" required minlength="10">
+                                    </div>
+                                    <div class="input__container">
+                                    <label for="estado">Ciudad o Región de Interés</label>
+                                        <select name="city" id="estado">
+                                                <option id="city" value="" disabled selected>Selecciona una opción</option>
+        
+                                                <option id="city" value="CDMX">Ciudad de México</option>
+                                                <option id="city" value="Monterrey">Monterrey</option>
+                                                <option id="city" value="Puebla">Puebla</option>
+                                                <option id="city" value="Querétaro">Querétaro</option>
+                                                <option id="city" value="Guadalajara">Guadalajara</option>
+                                        </select>
+                                    </div>
+                                    <div class="input__container">
+                                    <label for="monto">Capital disponible para inversión</label>
+                                    <select name="investement" id="monto">
+                                            <option id="investment" value="" disabled selected>Selecciona tu rango de inversión</option>
+        
+                                            <option id="investment" value="750K-1M">$750,000 - $1,000,000</option>
+                                            <option id="investment" value="1M-1.25M">$1,000,000 - $1,250,000</option>
+                                            <option id="investment" value="1.25M-1.5M">$1,250,000 - $1,500,000</option>
+                                    </select>
+                                    </div>
+        
+                                    <div class="form__btn-conatiner">
+                                        <button class="form__btn">ENVIAR SOLICITUD DE INFORMACIÓN</button>
+                                    </div>
+        
+                                    <div class="privacy">
+                                    <small> Tus datos están protegidos conforme a nuestro Aviso de Privacidad. Sin compromiso inicial.</small>
+                                    </div>
+                                    </form>
+                            </div>
+                        </div>
+                </section>
+
+            </div>
+
+            </section>
+
+
+            <section class="road">
+                <div class="road__container">
+
+                    <div class="road__layout-horizontal">
+
+                        
+                        <div class="road__layout-horizontal-text">
+
+                            <div class="road__title">
+                                <h2 class="section__title-II">Empieza tu camino empresarial hoy</h2>
+                            </div>
+
+                            <div class="road__text">
+                                <p class="section__text">Nuestro equipo de expansión se pondrá en contacto contigo en menos de 24 horas para brindarte una asesoríapersonalizada sobre el modelo de franquicia.</p>
+                            </div>
+
+                            <div class="road__list">
+                                    <ul>
+                                        <li>
+                                            <img src="./assets/icons/Icon Check Purple.svg" alt="">
+                                            <span class="text__list" >Dossier informativo completo</span>
+                                        </li>
+                                        <li>
+                                            <img src="./assets/icons/Icon Check Purple.svg" alt="">
+                                            <span class="text__list" >Proyección financiera estimada</span>
+                                        </li>
+                                        <li>
+                                            <img src="./assets/icons/Icon Check Purple.svg" alt="">
+                                            <span class="text__list" >Ubicaciones disponibles en Toluca</span>
+                                        </li>
+                                    </ul>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="road__layout-horizontal-img">
+
+                            <div class="content__img">
+                                <img class="road__img"  src="./assets/images/Helado de yogurt artesanal con fresas en Frostyland.png" alt="">
+                                <div class="img__info">🍦 Yogurt 100% Griego & Toppings Frescos</div>
+                            </div>
+
+                        </div>
+                    </div>    
+                </div>
+
+            </section>
+
+            <section id="benefits" class="features">
+                <div class="features__container">
+                    <div class="features__content">
+
+                    <div class="features__title">
+                        <h2 class="section__title-II">¿Por qué elegir Frostyland?</h2>
+                    </div>
+
+                    <div class="features__text">
+                        <p class="section__text">Nuestro ecosistema de soporte está diseñado para que te enfoques en lo más importante: deleitar a tus clientes.</p>
+                    </div>
+
+                    </div>
+
+                    <div class="features__cards">
+                        <div class="features__card">
+                            <img class="img__card" src="./assets/icons/icon card-1.svg" alt="">
+                            <h3 class="card__title">Variedad Exclusiva</h3>
+                            <p class="section__text-card">Más de 40 combinaciones de toppings y sabores estacionales únicos.</p>
+                        </div>
+                        <div class="features__card">
+                            <img class="img__card" src="./assets/icons/Icon card-2.svg" alt="">
+                            <h3 class="card__title">Operación Eficiente</h3>
+                            <p class="section__text-card">Sistemas automatizados que optimizan el tiempo y reducen mermas.</p>
+                        </div>
+                        <div class="features__card">
+                            <img class="img__card" src="./assets/icons/Icon card-3.svg" alt="">
+                            <h3 class="card__title">Abasto Centralizado</h3>
+                            <p class="section__text-card">Logística propia para garantizar la frescura y calidad en cada sucursal.</p>
+                        </div>
+                        <div class="features__card">
+                            <img class="img__card" src="./assets/icons/Icon card-4.svg" alt="">
+                            <h3 class="card__title">Know-How</h3>
+                            <p class="section__text-card">Capacitación continua y manuales operativos de clase mundial.</p>
                         </div>
                     </div>
-                </dialog>
-                
-                <div class="hero__content">
-                    <h2 class="title-section">La nueva <span class="texto-destacado"><i>Heladería</i></span> próxima en tu ciudad 🍧</h2>
-                    <p class="hero__subtitle">Una marca con innovación y concepto diferenciado en helados con ingredientes 100% frescos, opciones saludables y la mejor experiencia.</p>
+
+                    
                 </div>
+            </section>
 
-                <!-- Contenedor del Formulario -->
-                <div class="form-container">
-                    <form class="form-lead__form" action="">
-                        <p class="texto-destacado form-title"><b>Te interesa formar parte de la familia Frostyland</b></p>
-                        
-                        <label class="form-lead__label" for="input-name">Nombre</label>
-                        <input class="form-lead__input" id="input-name" type="text" placeholder="Tu nombre" required>
-                        
-                        <label class="form-lead__label" for="input-mail">Email</label>
-                        <input class="form-lead__input" id="input-mail" type="email" placeholder="Tu correo electrónico" required>
-                        
-                        <label class="form-lead__label" for="input-tel">Teléfono</label>
-                        <input class="form-lead__input" id="input-tel" type="tel" placeholder="Tu número de teléfono" required>
-                        
-                        <label class="form-lead__label" for="input-city">Ciudad</label>
-                        <input class="form-lead__input" id="input-city" type="text" placeholder="Tu Ciudad" required>
-                        
-                        <label class="form-lead__label" for="input-monto">Capital</label>
-                        <input class="form-lead__input" id="input-monto" type="number" placeholder="Tu monto de inversión" required>
-                        
-                        <label class="form-lead__label" for="text-comments">Comentarios</label>
-                        <textarea class="form-lead__input form-lead__textarea" id="text-comments" placeholder="¿En qué podemos ayudarte?"></textarea>
-                        
-                        <button class="form-lead__submit" type="submit">Enviar Solicitud</button>
-                    </form>
-                </div>
+            <section class="experience">
+                <div class="experience__container">
 
-                <!-- IMAGEN LATERAL -->
-                <div class="features__image-container hero__image-lateral">
-                    <img class="features__main-img" src="assets/images/franchise frostyland img.webp" alt="Helado Frostyland">
-                </div>
+                    <div class="experience__content-img">
+                        <img class="experience__img" src="./assets/images/franchise frostyland img.webp" alt="">
+                        <div class="img__description">
+                            <div class="img__description-title">
+                                <h3>Ambiente Minimalista & Cálido</h3>
+                            </div>
+                            <div class="img__description-text">
+                                <p>Diseñado para generar tráfico constante y alta <br> recurrencia de compra.</p>
+                            </div>
+                        </div>
+                    </div>
 
-            </div>
-        </section>
+                    <div class="experience__content">
+                        <div class="experience__small">
+                        <small class="small__text-purple-II">EXPERIENCIA FROSTYLAND PATIO TOLUCA</small>
+                        </div>
+                        <div class="experience__title">
+                        <h2 class="section__title-II">Diseño sensorial que enamora a primera vista</h2>
+                        </div>
+                        <div class="experience__text">
+                            <p class="section__text">Nos alejamos del típico fast-food saturado. Frostyland ofrece una atmósfera aspiracional con barras de mármol, iluminación cálida y una exhibición limpia que eleva el valor percibido.</p>
+                        </div>
+                        <div class="experience__list">
+                            <ul>
+                                <li><img src="./assets/icons/Icon Chek Purple II.svg" alt=""><span>Ubicación preferencial dentro del flujo principal de Patio Toluca</span></li>
+                                <li><img src="./assets/icons/Icon Chek Purple II.svg" alt=""><span>Fácil adaptación de m² (Islas desde 18m² y locales de 45m²)</span></li>
+                                <li><img src="./assets/icons/Icon Chek Purple II.svg" alt=""><span>Ticket promedio optimizado con venta cruzada de toppings y café</span></li>   
+                            </ul>
+                        </div>
 
-        <!-- SECCIÓN DE CARACTERÍSTICAS -->
-        <section class="features">
-            <h2 class="title-section">Resultados que inspiran confianza 🍨</h2>
-            <div class="features__grid">
-                <article class="feature-card">
-                    <img class="feature-card__icon" src="assets/icons/Icon Cubiertos.svg" alt="Ícono de cubiertos">
-                    <h3 class="feature-card__title">Tú eliges</h3>
-                    <p class="feature-card__description">En Frostyland, cada cliente crea su helado a su manera. Un modelo rápido, divertido y altamente rentable que atrae y fideliza constantemente a más consumidores.</p>
-                </article>
-                <article class="feature-card">
-                    <img class="feature-card__icon" src="assets/icons/Icon Hoja.svg" alt="Ícono de hoja">
-                    <h3 class="feature-card__title">Modelo de negocio rentable y probado</h3>
-                    <p class="feature-card__description">Combinamos el autoservicio, alta demanda y bajos costos operativos, garantizando atractivos márgenes de ganancia para tu inversión.</p>
-                </article>
-                <article class="feature-card">
-                    <img class="feature-card__icon" src="assets/icons/Icon Corazon.svg" alt="Ícono de corazón">
-                    <h3 class="feature-card__title">Toppings 100% Frescos y disfruta saludable</h3>
-                    <p class="feature-card__description">Seleccionamos las mejores fresas y frutas de temporada para asegurar la frescura en cada bocado. Opciones ligeras y deliciosas pensadas para consentirte sin remordimientos.</p>
-                </article>
-                <article class="feature-card">
-                    <img class="feature-card__icon" src="assets/icons/Icon Cubiertos.svg" alt="Ícono de cubiertos">
-                    <h3 class="feature-card__title">Desarrollo del “know-how” específico</h3>
-                    <p class="feature-card__description">Te brindamos procesos optimizados, entrenamiento completo para tu apertura y soporte continuo para garantizar el éxito de tu franquicia.</p>
-                </article>
-                <article class="feature-card">
-                    <img class="feature-card__icon" src="assets/icons/Icon Hoja.svg" alt="Ícono de hoja">
-                    <h3 class="feature-card__title">Inversión accesible y rápido retorno</h3>
-                    <p class="feature-card__description">Una oportunidad con inversión accesible y un esquema diseñado para lograr una rápida recuperación de capital en una marca en constante crecimiento.</p>
-                </article>
-                <article class="feature-card">
-                    <img class="feature-card__icon" src="assets/icons/Icon Corazon.svg" alt="Ícono de corazón">
-                    <h3 class="feature-card__title">Mínimos requerimientos de personal</h3>
-                    <p class="feature-card__description">Nuestro modelo operativo está diseñado con procesos eficientes para que el local pueda ser operado con una dotación reducida de personal, optimizando tus gastos fijos.</p>
-                </article>
-            </div>
-        </section>
+                        
+                        <a href="#contact"class="button__submit"> 
+                            Consultar Lugares y Ubicaciones</a>
+                        </a>
 
-        <!-- SECCIÓN DE RESEÑAS -->
-        <section class="review">
-            <div class="review-section">
-                <img class="icon-stars" src="assets/icons/Icon Stars.svg" alt="Estrellas de calificación">
-                <h2 class="title-section">5.0 Estrellas (55+ Reseñas) <br> <span class="subtitle-review">Opiniones reales de nuestros clientes en Google Maps</span></h2>
-            </div>
-            <div class="reviews">
-                <div class="review-card">
-                    <p class="review-card__comment">"El mejor lugar para un postre rápido saludable. La calidad de la fruta es impecable y el personal muy amable."</p>
-                    <div class="review-card__profile">
-                        <img class="review-card__avatar" src="assets/icons/Avatar Profile.svg" alt="Avatar Frostyland">
-                        <span class="review-card__name">Joshua Hernandez</span>
                     </div>
                 </div>
-                <div class="review-card">
-                    <p class="review-card__comment">"Excelente concepto de auto-servicio. Las fresas con crema son un 10/10."</p>
-                    <div class="review-card__profile">
-                        <img class="review-card__avatar" src="assets/icons/Avatar Profile.svg" alt="Avatar Frostyland">
-                        <span class="review-card__name">Diana Velazquez</span>
-                    </div>
-                </div>
-                <div class="review-card">
-                    <p class="review-card__comment">"Siempre fresco y el local impecable. Muy recomendado para venir con la familia."</p>
-                    <div class="review-card__profile">
-                        <img class="review-card__avatar" src="assets/icons/Avatar Profile.svg" alt="Avatar Frostyland">
-                        <span class="review-card__name">German Lopez</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- MODELOS DE NEGOCIO -->
-        <section class="data-franchise-purple">
-            <div class="data-franchise-title">
-                <h2 class="title-section title-section__purple">Modelos de negocio</h2>
-            </div>
+            <section id="finance" class="finance">
+                <div class="finance__container">
+                    <div class="finance__small">
+                        <small class="small__text-purple">VIABILIDAD FINANCIERA</small>
+                    </div>
+                    <div finance__title>
+                        <h2 class="section__title-II">Métricas que Impulsan tu Inversión</h2>
+                    </div>
+                    <div class="finance__text">
+                        <p class="section__text">Números claros y transparentes basados en el desempeño histórico de unidades en operación.</p>
+                    </div>
+
+                    <div class="cards">
+                        <div class="card">
+                            <img class="finance__card-img" src="./assets/icons/Icon ROI.svg" alt="ROI">
+                            <h3 class="finance__card-numbers">18-24</h3>
+                            <h6 class="finance__card-title">Meses para ROI</h6>
+                            <p class="finance__card-text">Recuperación estimada de capital de inversión en el dinámico sector F&B.</p>
+                        </div>
+                        <div class="card">
+                            <img class="finance__card-img" src="./assets/icons/Icon Estandar.svg" alt="">
+                            <h3 class="finance__card-numbers">100%</h3>
+                            <h6 class="finance__card-title">Estandarizado</h6>
+                            <p class="finance__card-text">Simplicidad operativa absoluta mediante recetas y mermas controladas digitalmente.</p>
+                        </div>
+                        <div class="card">
+                            <img class="finance__card-img" src="./assets/icons/Icon Retention.svg" alt="">
+                            <h3 class="finance__card-numbers">+94%</h3>
+                            <h6 class="finance__card-title">Retención de Clientes</h6>
+                            <p class="finance__card-text">Alta recompra semanal en centros comerciales de alto tráfico como Toluca</p>
+                        </div>
+                        <div class="card">
+                            <img class="finance__card-img" src="./assets/icons/Icon Satisfation.svg" alt=""> 
+                            <h3 class="finance__card-numbers">4.9 / 5</h3>
+                            <h6 class="finance__card-title">Satisfacción de Socios</h6>
+                            <p class="finance__card-text">Acompañamiento post- apertura valorado por nuestra red de franquiciatarios.</p>
+                        </div>
+                    </div>
+
+                    <div class="especial__card">
+                        <hr>
+                        <p> <i> "Nuestros socios comerciales reportan una eficiencia operativa 20% superior al promedio del mercado gracias a nuestro sistema de abasto centralizado y bajo requerimiento de merma."</i></p>
+                        <p>DIRECCIÓN DE OPERACIONES & FRANQUICIAS FROSTYLAND</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product">
+                <div class="product__container">
+                    <div class="product__layout-horizontal">
+                        <div class="product__card">
+                            <img class="product__img" src="./assets/images/Fresas con Crema y Helado.png" alt="Fresas frescas sobre helado cremoso de yogurt">
+                            <div class="img__description-product">
+                                <span>Especialidad de la casa</span>
+                                <p>Nuestra Receta Secreta</p>
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <div class="product__title">
+                                <h2 class="section__title-II">Fresas con Crema y Helado de Yogurt</h2>
+                            </div>
+                            <div class="product__text">
+                                <p class="section__text">Descubre el equilibrio perfecto entre la cremosidad de nuestra receta artesanal y el dulzor natural de fresas frescas seleccionadas a mano cada mañana. Una experiencia sensorial que redefine el postre clásico.</p>
+                            </div>
+
+                            <div class="product__list">
+                                <ul>
+                                    <li>
+                                        <img src="./assets/icons/Icon Check Purple.svg" alt="">
+                                        <span class="text__list" >Yogurt bajo en grasa y alto en probióticos</span>
+                                    </li>
+                                    <li>
+                                        <img src="./assets/icons/Icon Check Purple.svg" alt="">
+                                        <span class="text__list" >Fruta de origen local garantizada</span>
+                                    </li>
+                                    <li>
+                                        <img src="./assets/icons/Icon Check Purple.svg" alt="">
+                                        <span class="text__list" >Sin conservadores ni colorantes artificiales</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                        
+                </div>
+
+            </section>
+
+            <section id="testimonials" class="customer">
+                <div class="customer__container">
+                    <div class="customer__small">
+                        <div class="customer__display">
+                            <img src="./assets/icons/Icon 5 stars.svg" alt="">
+                            <small class="customer__calification">5.0 de Calificación</small>
+                        </div>
+                        <small class="customer__google">Google Verified Reviews</small>
+                    </div>
+
+                    <div class="customer__info">
+                        <div class="customer__title">
+                            <h2 class="section__title">Lo que dicen clientes y socios</h2>
+                        </div>
+                        <div class="customer__text">
+                            <p class="section__text">Más de 55 reseñas verificadas de 5 estrellas en Google Maps y portales de franquicias.</p>
+                        </div>
+                    </div>
+
+                    <div class="customer__cards-container">
+                        <div class="customer__cards">
+                            <img src="./assets/icons/Icon 5 stars user.svg" alt="">
+                            <div class="customer__card">
+                                <p class="customer__comment">"El yogurt natural con zarzamoras y menta es el mejor que he probado. El local siempre luce impecable, dan ganas de volver cada fin de semana con la familia."</p>
+                                <div class="customer__user">
+                                    <img src="./assets/icons/User 1.svg" alt="">
+                                    <div class="user">
+                                        <h5>Jonathan M. R.</h5>
+                                        <P>Cliente Frecuente · Patio Toluca</P>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer__cards">
+                            <img src="./assets/icons/Icon 5 stars user.svg" alt="">
+                            <div class="customer__card">
+                                <p class="customer__comment">"Como inversionista, el soporte inicial en el montaje y la capacitación al equipo superó mis expectativas. El sistema de software de inventarios nos ahorra horas de trabajo."</p>
+                                <div class="customer__user">
+                                    <img src="./assets/icons/User 2.svg" alt="">
+                                    <div class="user">
+                                        <h5>Juan Carlos P.</h5>
+                                        <P>Franquiciatario Operador</P>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer__cards">
+                            <img src="./assets/icons/Icon 5 stars user.svg" alt="">
+                            <div class="customer__card">
+                                <p class="customer__comment">"La calidad de los insumos y la frescura de la fruta no tiene comparación. La marca transmite confianza inmediata y se nota en la cola de clientes los domingos."</p>
+                                <div class="customer__user">
+                                    <img src="./assets/icons/User 3.svg" alt="">
+                                    <div class="user">
+                                        <h5>Carlos Enrique H.</h5>
+                                        <P>Crítico Gastronómico & Foodie</P>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+            <section id="contact" class="cta">
+                <div class="cta__container">
+                    <div class="cta__small">
+                        <small class="small__text-bco">TERRITORIO EXCLUSIVO TOLUCA</small>
+                    </div>
+                    <div class="cta__title">
+                        <h2 class="section__title-bco">¿Listo para emprender tu camino al éxito?</h2>
+                    </div>
+                    <div class="cta__text">
+                        <p class="section__text-bco">No dejes pasar la oportunidad de pertenecer a la familia Frostyland. Los mejores puntos y concesiones en centros comerciales se ocupan rápido.</p>
+                    </div>
+                    <div class="cta__buttons">
+                        <a class="franchise" href="#form">QUIERO MI FRANQUICIA AHORA</a>
+                        <a class="whatsapp" href="https://wa.me/5215552640888" target="_blank">CONTACTO DIRECTO WHATSAPP</a>
+                    </div>
+                    <div class="cta__features">
+                        <div class="cta__feature"><small>Retorno 18-24m</small></div>
+                        <div class="cta__feature"><small>•</small></div>
+                        <div class="cta__feature"><small>Know-how Incluido</small></div>
+                        <div class="cta__feature"><small>•</small></div>
+                        <div class="cta__feature"><small>Soporte y manuales</small></div>
+                    </div>
+                </div>
+            </section>
+
+            <section  #location class="location" id="location">
+                <div class="location__container">
+                    <div class="location__title">
+                    <!-- Columna Izquierda: Bloque de textos -->
+                    <div class="location__text-group">
+                        <h2 class="section__title-II">Visítanos en Toluca</h2>
+                        <p class="section__text">Frostyland Boutique & Cafetería</p>
+                    </div>
+                    
+                    <!-- Columna Derecha: Icono del mapa -->
+                    <div class="location__svg">
+                        <img src="./assets/icons/Icon Maps.svg" alt="Mapa">
+                    </div>
+                </div>
+
+                    
+                    <div class="location__info">
+                        <h4 class="location__info-title">Dirección</h4>
+                        <p class="location__info-text">Av. Miguel Hidalgo Ote 1337, Vértice, 50150 Toluca de Lerdo, Méx., Centro Comercial Patio Toluca.</p>
+                    </div>
+                    <div class="location__time">
+                        <h4 class="location__time-title">Horario</h4>
+                        <p class="location__time-text">Abierto todos los días de 1:00 p.m. a 9:00 p.m.</p>
+                    </div>
+                    <div class="location__button">
+                        <a class="location__btn" href="https://maps.app.goo.gl/inPnucr2PVCo5BZW8" target="_blank">Cómo llegar</a>
+                    </div>
+                    <div class="location__maps">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m11!1m3!1d3!2d-99.6323950613364!3d19.2865289334416!2m2!1f0!2f90!3m2!1i1024!2i768!4f75!3m3!1m2!1s0x85cd8bf8eed6de97%3A0x8ee2c8231753f8a4!2sFROSTYLAND%20patio%20Toluca!4v1793831687867" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+            </section>
+
             
-            <div class="data-months">
-                <div class="months-title"><h2>Modelo Isla 9m2</h2></div>
-                <div class="months-subtitle"><p>Cuota Inicial de Franquicia $800,000</p></div>
-                <div class="months-parraf"><p>Meses para retorno de inversión | 10 meses</p></div>
-                <div class="img-local"><img src="assets/images/Isla 2.png" alt="Isla Frostyland"></div>
-            </div>
 
-            <div class="data-months">
-                <div class="months-title"><h2>Modelo Local 20m2</h2></div>
-                <div class="months-subtitle"><p>Cuota Inicial de Franquicia $800,000</p></div>
-                <div class="months-parraf"><p>Meses para retorno de inversión | 25 meses</p></div>
-                <div class="img-local"><img src="assets/images/Local 2.png" alt="Local Frostyland"></div>
-            </div>
+        </main>
 
-            <div class="data-bars">
-                <div class="data-bars__item">
-                    <div class="data-bars__header">
-                        <span>Potencial de Crecimiento</span>
-                        <span class="numero-azul">94%</span>
-                    </div>
-                    <progress value="0" max="100" class="progreso-azul"></progress>
+        <dialog id="videoModal" class="video-modal" aria-label="Video tour de Frostyland">
+            <div class="video-modal__content">
+                <button type="button" id="closeVideoModal" class="video-modal__close" aria-label="Cerrar video" autofocus>&times;</button>
+                <div class="video-container">
+                    <iframe
+                        id="youtubeIframe"
+                        data-src="https://www.youtube.com/embed/hZXv3lLxgz0?feature=share&autoplay=1&rel=0"
+                        title="Video tour de Frostyland"
+                        allow="autoplay; encrypted-media; picture-in-picture"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
                 </div>
-
-                <div class="data-bars__item">
-                    <div class="data-bars__header">
-                        <span>Franquiciatarios y el ROI</span>
-                        <span class="numero-rosa">4.9/5</span>
-                    </div>
-                    <progress value="0" max="5" class="progreso-rosa"></progress>
-                </div>
-
-                <p class="data-bars__quote"><i>"El acompañamiento desde la selección del local hasta la apertura fue clave para superar mis metas de ventas."</i></p>
+                <a class="video-modal__fallback" href="https://www.youtube.com/shorts/hZXv3lLxgz0?feature=share" target="_blank" rel="noopener noreferrer">
+                    ¿No puedes reproducirlo? Ver en YouTube
+                </a>
             </div>
-        </section>
+        </dialog>
 
-        <!-- PRODUCTOS -->
-        <section class="products">
-    <div class="products__container">
-        <h2 class="title-section">Productos</h2>
-        <div class="product-card">
-            
-            <!-- Bloque de información (Texto y beneficios) -->
-            <div class="product-info">
-                <h2 class="product-card__title">Helado Yogurt Griego 100% Natural</h2>
-                <p class="product-card__description">Descubre el equilibrio perfecto entre la cremosidad de nuestra receta artesanal...</p>
-                <ul class="product-card__benefits">
-                    <li class="product-card__benefit-item"><img src="assets/icons/Icon Check.svg" alt=""> Yogurt bajo en grasa...</li>
-                    <li class="product-card__benefit-item"><img src="assets/icons/Icon Check.svg" alt=""> Fruta de origen local...</li>
-                    <li class="product-card__benefit-item"><img src="assets/icons/Icon Check.svg" alt=""> Sin conservadores...</li>
-                </ul>
-            </div>
-
-            <!-- Contenedor de la imagen (Debe estar al mismo nivel que .product-info) -->
-            <div class="product-card__icecream">
-                <img src="assets/images/1C2031BD-F629-4C7E-B389-BBB60AD1C6E0.png" alt="Helado Frostyland">
-            </div>
-
-        </div>
-    </div>
-</section>
-
-        <!-- APERTURAS -->
-        <section class="info">
-            <h2 class="title-section">Aperturas</h2>
-
-            <div class="ubication-franchise__info">
-                <div class="ubication-franchise__info-img">
-                    <span>🍧 FROSTYLAND Patio Toluca</span>
-                </div>
-                <p class="ubication-franchise__description">Av Miguel Hidalgo Ote 1337, Vértice, 50150 Toluca de Lerdo, Méx. Centro Comercial Patio Toluca</p>
-                <a class="button-maps" href="https://www.google.com/maps/place/FROSTYLAND+Plaza+Patio/@20.6404821,-100.4542653,14z/data=!4m10!1m2!2m1!1sfrostyland!3m6!1s0x85d3510032d650c9:0x5e917314899f4de4!8m2!3d20.6182223!4d-100.4397699!15sCgpmcm9zdHlsYW5kkgEOaWNlX2NyZWFtX3Nob3DgAQA!16s%2Fg%2F11wvm8fbk2?entry=ttu" target="_blank" rel="noopener noreferrer"><img src="assets/icons/Icon Road.svg" alt="Ícono de ruta"><span>Cómo llegar</span></a>
-            </div>
-
-            <div class="ubication-franchise__info">
-                <div class="ubication-franchise__info-img">
-                    <span>🍧 FROSTYLAND Plaza Patio</span>
-                </div>
-                <p class="ubication-franchise__description">Av. Revolución, Puerta del Sol II, 76114 Santiago de Querétaro, Qro.</p>
-                <a class="button-maps" href="https://www.google.com/maps/place/FROSTYLAND+Plaza+Patio/@20.6182273,-100.4423448,17z/data=!3m1!4b1!4m6!3m5!1s0x85d3510032d650c9:0x5e917314899f4de4!8m2!3d20.6182223!4d-100.4397699!16s%2Fg%2F11wvm8fbk2?entry=ttu" target="_blank" rel="noopener noreferrer"><img src="assets/icons/Icon Road.svg" alt="Ícono de ruta"><span>Cómo llegar</span></a>
-            </div>
-
-            <div class="ubication-franchise__info">
-                <div class="ubication-franchise__info-img">
-                    <span>🍧 FROSTYLAND Portal Querétaro</span>
-                </div>
-                <p class="ubication-franchise__description">Av Cerro Sombrerete 119, Misión Bucareli Sur, 76168 Santiago de Querétaro, Qro.</p>
-                <a class="button-maps" href="https://www.google.com/maps/place/FROSTYLAND+Portal+Quer%C3%A9taro/@20.6406473,-100.4188393,17z/data=!3m1!4b1!4m6!3m5!1s0x85d35bdf2847d219:0xffd9482230e214cc!8m2!3d20.6406423!4d-100.4162644!16s%2Fg%2F11zgs6qwrd?entry=ttu" target="_blank" rel="noopener noreferrer"><img src="assets/icons/Icon Road.svg" alt="Ícono de ruta"><span>Cómo llegar</span></a>
-            </div>
-
-            <div class="ubication-franchise__info">
-                <div class="ubication-franchise__info-img">
-                    <span>🍧 FROSTYLAND Plaza del Parque</span>
-                </div>
-                <p class="ubication-franchise__description">76169, Plaza del Parque, 76169 Santiago de Querétaro, Qro.</p>
-                <a class="button-maps" href="https://www.google.com/maps/place/FROSTYLAND+Plaza+del+Parque/@20.6157543,-100.5956164,11z/data=!4m10!1m2!2m1!1sFROSTYLAND!3m6!1s0x85d35b0069012c31:0x30fe2885d06f3ba8!8m2!3d20.6157637!4d-100.3917625!15sCgpGUk9TVFlMQU5EkgEOaWNlX2NyZWFtX3Nob3DgAQA!16s%2Fg%2F11wtdgsg10?entry=ttu" target="_blank" rel="noopener noreferrer"><img src="assets/icons/Icon Road.svg" alt="Ícono de ruta"><span>Cómo llegar</span></a>
-            </div>
-        </section>
-
-        <section class="map-section">
-    <h2 class="title-section">Encuéntranos</h2>
-    <!-- Contenedor donde se inyectará el mapa mediante JS -->
-    <div class ="google-map" >
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.714714453355!2d-100.4161565!3d20.640482100000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d35ba1572c3527%3A0x4249fd33b9371a86!2sFROSTYLAND%20Portal%20Quer%C3%A9taro!5e0!3m2!1ses!2smx!4v1790205276252!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-    </div>
-</section>
-
-        <!-- FOOTER -->
         <footer class="footer">
-            <div class="footer-info">
-                <h3 class="footer-title">FROSTYLAND</h3>
-                <p class="footer-description">Elevando la experiencia del postre artesanal en el corazón. Calidad y frescura en cada helado Frostyland.</p>
-                <div class="footer-website">
-                   
+            <div class="footer__container">
+                <div class="footer__brands">
+                    <div class="footer__frosty"><p style="color: #fff;">Frostyland</p></div>
+                    <div class="footer__alcazar"><img src="./assets/icons/Logo Alcazar Siglas.svg"></div>
                 </div>
-                <hr>
-                <a class="footer-privacy" href="https://alcazar.com.mx/aviso-de-privacidad/" target="_blank" rel="noopener noreferrer">AVISO DE PRIVACIDAD</a>
-                <p class="privacidad">@Alcázar & Compañía | © 2026 FROSTYLAND. All rights reserved.</p>
+                <div class="footer__description"><p>Líderes en helado artesanal de yogurt con toppings premium. Diseñado para ofrecer experiencias de compra memorables y oportunidades de inversión rentables</p></div>
+                <nav class="footer__navigation" aria-label="Enlaces rápidos">
+                    <span class="footer__navigation-title">Explora</span>
+                    <a class="footer__navigation-link" href="https://frostyland.com.mx/" target="_blank">Frostyland</a>
+                    <a class="footer__navigation-link" href="https://alcazar.com.mx/" target="_blank">Alcázar & Compañía</a>
+                   
+                </nav>
+                <div class="footer__sections">
+                    <div class="Aviso de Privacidad"><a class="footer__link" href="aviso-privacidad.html" target="_blank">Aviso de Privacidad</a></div>
+                    <div class="Correo Electrónico"><p class="footer__link">•</p></div>
+                    <div class="Teléfono"><a class="footer__link" href="tel:+525552640888">Teléfono</a></div>
+                    <div class="Correo Electrónico"><p class="footer__link">•</p></div>
+                    <div class="Correo Electrónico"><a class="footer__link" href="mailto:consultas@alcazar.com.mx">Correo Electrónico</a></div>
+                </div>
+                <div class="footer__socials" aria-label="Redes sociales">
+                    <a href="https://www.instagram.com/frostyland_mx/" target="_blank" class="footer__social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="6" r="1.25" fill="currentColor"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/frostyland.oficial/" target="_blank" class="footer__social-link" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3V13h2.8v8h3.4Z"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@frostyland.jalisco?is_from_webapp=1&sender_device=pc" target="_blank" class="footer__social-link" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M19.6 7.2a5.8 5.8 0 0 1-3.5-1.2v8.1a5.8 5.8 0 1 1-5-5.7v3.2a2.6 2.6 0 1 0 1.8 2.5V3h3.2c.2 2 1.6 3.6 3.5 4v.2Z"/></svg>
+                    </a>
+                </div>
+                <hr class="line">
+                <div class="footer__small"><small>© 2026 Alcázar & Compañía, CDMX. Todos los derechos reservados. Las marcas mostradas son propiedad de sus respectivos titulares.</small></div>
             </div>
         </footer>
+
     </div>
 </body>
 <script src="script.js"></script>

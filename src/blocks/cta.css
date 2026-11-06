@@ -1,0 +1,129 @@
+.cta{
+    padding: 48px 16px;
+    background-color: #1C0A35;
+    margin: 0 auto;
+    width: 100%;
+    
+}
+
+.cta__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.small__text-bco{
+    color: #D8B4FE;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fdfbffcc;
+    border-radius: 50px;
+}
+
+.section__title-bco{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 30px;
+    letter-spacing: -0.6px;
+}
+
+.section__text-bco{
+    color: #E9D5FF;
+    font-size: 12px;
+    line-height: 19.5px;
+    font-weight: 400;
+}
+
+.cta__buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 12px;
+}
+
+.franchise{
+    display: block;
+    padding: 14px 24px;
+    color: #fff;
+    background-color: #7E22CE;
+    text-decoration: none;
+    border-style: double;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 12px;
+    
+}
+
+.whatsapp{
+    display: block;
+    padding: 14px 24px;
+    color: #fff;
+    background-color: #10B981;
+    text-decoration: none;
+    border-style: double;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.cta__features{
+    display: flex;
+    gap: 12px;
+    padding-top: 12px;
+    color: #D8B4FE;
+    font-size: 11px;
+    font-weight: 600;
+    margin: 0 auto;
+}
+
+@media (min-width:1024px) {
+    .cta{
+        padding: 5rem 5rem;
+    }
+
+    .cta__container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .small__text-bco{
+        font-size: 0.875rem;
+    }
+
+    .section__title-bco{
+        font-size: 2.25rem;
+        padding: 1rem 0;
+    }
+
+    .section__text-bco{
+        font-size: 1rem;
+    }
+
+    .franchise, .whatsapp{
+        font-size: 1rem;
+    }
+
+    .cta__buttons{
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .franchise,
+    .whatsapp {
+        flex: 1;
+        max-width: 340px;
+    }
+
+    .cta__features{
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 1rem;
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,128 @@
+.finance{
+    padding: 40px 16px;
+    background-color: #F9F1FF;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+.finance__container{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+}
+
+.cards{
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px
+}
+
+.card{
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 2px solid #F3E8FF;
+    box-shadow: none;
+}
+
+.card:hover{
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border: 2px solid #7E22CE;
+}
+
+.finance__card-numbers{
+    padding-top: 8px;
+    color: #7E22CE;
+}
+
+.finance__card-text{
+    font-weight: 400;
+    font-size: 10px;
+    color: #64748B;
+}
+
+.finance__card-title{
+    padding: 0.5rem 0;
+}
+
+.especial__card{
+    
+    gap: 8px;
+    background-color: #7E22CE;
+    color: #F3E8FF;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 16px;
+    border-radius: 16px;
+    text-align: left;
+}
+
+.especial__card p{
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    padding-top: 8px;
+    font-size: 9px;
+
+}
+
+@media (min-width:1024px) {
+    .finance{
+        padding: 3rem 5rem;
+    }
+
+    .finance__container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .finance .section__text{
+        font-size: 1rem;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    .finance .section__title-II{
+        padding: 1rem;
+    }
+
+    .cards{
+        padding: 3rem 0;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+
+    .card{
+        padding: 1.25rem;
+    }
+
+    .finance__card-img{
+        height: 45px;
+        width: 45px;
+    }
+
+    .finance__card-numbers{
+        font-size: 2rem;
+    }
+
+    .finance__card-title{
+        font-size: 1rem;
+        padding: 0.5rem 0;
+    }
+
+    .finance__card-text{
+        font-size: 0.875rem;
+    }
+
+    .especial__card{
+        padding: 1.5rem;
+    }
+
+    .especial__card p{
+        font-size: 1rem;
+        
+    }
+}

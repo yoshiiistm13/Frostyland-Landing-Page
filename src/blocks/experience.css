@@ -1,0 +1,159 @@
+.experience{
+    padding: 20px 16px;
+    background-color: #F9F1FF;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.experience__content{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+}
+
+
+.experience__content-img{
+    margin-top: 2.5rem;
+    position: relative;
+    width: 100%;
+    height: 360px;
+     border-radius: 15px;
+    border: 1px solid #F3E8FF;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.experience__img{
+   width: 100%;
+    height: 100%;   /* 👈 Hace que llene todo el alto del contenedor */
+    object-fit: cover; 
+    object-position: center -70px; /* 👈 Prueba esto: recorta arriba y muestra más abajo (el centro/piso del local) */
+    display: block;
+    border: 1px solid #F3E8FF;
+}
+
+.img__description{
+    position: absolute;
+    bottom: 1rem;
+    left: 10px;
+    background-color: #3B0764CC ;
+    border-radius: 12px;
+    text-align: left;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.experience .section__title-II{
+    padding: 0.3rem 0;
+}
+
+.img__description-title{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.img__description-text{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.small__text-purple-II{
+    color: #7E22CE;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.experience__list{
+    padding: 12px 0;
+}
+
+.experience__list span{
+    font-size: 12px;
+}
+
+.button__submit{
+    width: 100%;
+    padding: 0.8rem;
+    text-align: center;
+    background-color: #7E22CE;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.button__submit a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+@media (min-width:1024px) {
+    .experience{
+        padding: 2rem 3rem;
+    }
+
+    .experience__container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: center;
+        gap: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .experience__content{
+        padding: 1rem 0;
+        min-width: 0;
+    }
+
+    .experience__content-img {
+        height: 420px;
+        margin-top: 0;
+    }
+
+    .experience__img{
+        object-position: center;
+    }
+
+    .small__text-purple-II{
+        font-size: 14px;
+    }
+
+    .experience .section__text{
+        padding-top: 1rem;
+        font-size: 1rem;
+    }
+
+    .experience__list{
+        padding: 1.5rem 0 2rem;
+    }
+
+    .experience__list span{
+        font-size: 0.95rem;
+        font-weight: 600;
+    }
+
+    .experience__list li{
+        gap: 1rem;
+    }
+
+    .experience__list ul{
+        gap: 1.2rem;
+    }
+
+    .experience__list img{
+       width: 30px;
+       height: 30px; 
+    }
+}

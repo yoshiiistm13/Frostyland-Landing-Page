@@ -1,0 +1,151 @@
+.road{
+    margin: 0 auto;
+    padding: 20px 16px 3rem;
+    background-color: #F9F1FF;
+    width: 100%;
+}
+
+.road__container{
+ display: flex;
+ flex-direction: column;
+ justify-content: start;
+
+ gap: 12px;   
+}
+
+.road__list{
+    padding: 1rem 0rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 7.5px;
+}
+
+.road__list li{
+    list-style: none;
+    
+}
+
+.road .section__title-II{
+    padding: 0.7rem 0;
+}
+
+.text__list{
+    font-weight: 600;
+    font-size: 12px;
+
+}
+
+li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 7.5px;
+}
+
+.content__img{
+    position: relative;
+    padding-top: 12px;
+    margin:0 auto;
+}
+
+.road__img{
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    border: 3px solid #F3E8FF;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    
+}
+
+.img__info{
+    position: absolute;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    bottom: 1rem;
+    left: 50%;
+    padding: 6px 12px;
+    background-color: #fff;
+    color: #581C87;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 9999px;
+}
+
+.road__layout-horizontal{
+        display: block;
+
+    }
+
+
+
+@media (min-width:1024px) {
+    .road{
+        padding: 3rem 5rem;
+    }
+
+    .road__container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .road .section__text{
+        font-size: 1rem;
+        padding: 1rem 0;
+    }
+
+    .road__layout-horizontal{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .road .section__title-II{
+        padding: 1rem 0;
+    }
+
+    
+
+    .road__list,
+    .content__img {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .content__img {
+        padding-top: 0;
+        max-width: 520px;
+    }
+
+    .road__img {
+        display: block;
+    }
+
+    .road__list ul{
+        gap: 1.5rem;
+    }
+
+    .road__list img{
+        height: 27px;
+        width: 27px;
+    }
+
+    
+    .text__list{
+        font-size: 1rem;
+    }
+
+    
+
+}

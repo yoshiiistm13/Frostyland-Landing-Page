@@ -1,0 +1,153 @@
+.location{
+    padding: 40px 16px; 
+    width: 100%;  
+}
+
+.location__container{
+    border: 2px solid #F3E8FF;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.location__title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.location__svg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #F3E8FF;
+    padding: 0.8rem 0.8rem;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.section__text{
+    color: #7E22CE;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.location__info{
+    display: flex;
+    flex-direction: column;
+    padding-top: 12px;
+    font-size: 12px;
+}
+
+.location__time{
+    display: flex;
+    flex-direction: column;
+    padding-top: 12px;
+    font-size: 12px;
+}
+
+.location__btn{
+    margin-top:17px ;
+    background-color: #581C87;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.location__maps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 16px 0; /* Espaciado opcional arriba y abajo del mapa */
+    border: 2px solid #660dc5;
+    border-radius: 15px; /* Esquinas redondeadas perfectas */
+}
+
+/* 2. EL IFRAME: Controla el diseño curvo y el tamaño responsivo */
+.location__maps iframe {
+    width: 100%;
+    max-width: 450px;    /* Cambia este valor si quieres que la tarjeta sea más ancha o angosta */
+    height: 120px;       /* Mantiene la proporción horizontal idéntica a tu imagen */
+    
+    
+    border: none;        /* Elimina el marco gris por defecto que mete Google */
+    
+    display: block;      /* Elimina espacios fantasma debajo del iframe */
+}
+
+@media (min-width:1024px) {
+    .location {
+        padding: 3rem 5rem;
+    }
+
+    .location__container{
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        align-items: center;
+        column-gap: 2rem;
+        row-gap: 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .location .section__text{
+        font-size: 16px;
+    }
+
+    .location__info-title, .location__time-title{
+        font-size: 20px;
+    }
+
+    .location__info-text, .location__time-text{
+        font-size: 16px;
+        max-width: none;
+    }
+
+    .location__svg{
+       width: 60px;  
+        height: 60px; 
+        flex-shrink: 0; 
+        }
+
+    .location__svg img {
+        width: 30px;  
+        height: 30px;
+        display: block;
+    }
+
+    .location__btn{
+        padding: 14px 24px;
+        font-size: 16px;
+    }
+
+    .location__maps{
+        grid-column: 2;
+        grid-row: 1 / span 4;
+        width: 100%;
+        min-height: 320px;
+        height: 100%;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .location__maps iframe{
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none;
+    }
+
+    
+}
