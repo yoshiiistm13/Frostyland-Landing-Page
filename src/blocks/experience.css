@@ -27,9 +27,9 @@
 
 .experience__img{
    width: 100%;
-    height: 100%;   /* 👈 Hace que llene todo el alto del contenedor */
-    object-fit: cover; 
-    object-position: center -70px; /* 👈 Prueba esto: recorta arriba y muestra más abajo (el centro/piso del local) */
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     display: block;
     border: 1px solid #F3E8FF;
 }
